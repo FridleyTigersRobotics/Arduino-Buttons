@@ -12,7 +12,14 @@
 
 #include <Joystick.h>
 
-Joystick_ Joystick;
+Joystick_ Joystick(
+  JOYSTICK_DEFAULT_REPORT_ID,
+  JOYSTICK_TYPE_GAMEPAD,
+  10,   // Button count
+  0,    // Hat switch count
+  false, false, false, false, false, false,
+  false, false, false, false, false
+);
 
 void setup() {
   // Initialize Button Pins
@@ -51,6 +58,6 @@ void loop() {
     }
   }
 
-  delay(50);
+  delay(5);
 }
 
